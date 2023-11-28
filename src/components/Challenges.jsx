@@ -2,6 +2,7 @@ import '../styles/challenges.css';
 import canImg from '../assets/metal-cans.png';
 import plasticBottles from '../assets/plastic-bottles.png';
 import plasticBags from '../assets/plastic-bags.png';
+import glassPaperPlastic from '../assets/glass-paper-plastic-recycle.png';
 
 export const Challenges = () => {
 
@@ -26,6 +27,13 @@ export const Challenges = () => {
             description: 'collect 10 plastic bags',
             points: 35,
             image: plasticBags,
+        },
+        {
+            id: 4,
+            name: 'Trash Buster',
+            description: 'collect 10 items of different materials',
+            points: 50,
+            image: glassPaperPlastic,
         },
     ]
 
