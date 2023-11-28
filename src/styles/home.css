@@ -1,0 +1,9 @@
+.home {
+    display: flex;
+    flex-direction: column;
+    margin: 12px;
+}
+
+.home h2 {
+    font-size: 28px;
+}

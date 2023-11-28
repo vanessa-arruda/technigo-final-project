@@ -1,6 +1,6 @@
 .challenge-container{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     margin: 0 0 4rem 0;
 }
 

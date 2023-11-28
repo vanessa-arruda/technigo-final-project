@@ -1,8 +1,19 @@
 .navBar {
     display: flex;
     justify-content: space-around;
-    background-color: #4B5842;
-    color: #fff;
+    background-color: #8FB339;
     font-weight: 600;
-    padding: 1rem;
+    padding: 0rem;
+}
+
+.navlink{
+    text-decoration: none;
+    color: #fff;
+    padding: 12px;
+}
+
+.navlink:hover{
+    color: #4B5842;
+    background-color: #C7D59F;
+    cursor: pointer;
 }
