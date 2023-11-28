@@ -1,4 +1,7 @@
 import '../styles/challenges.css';
+import canImg from '../assets/metal-cans.png';
+import plasticBottles from '../assets/plastic-bottles.png';
+import plasticBags from '../assets/plastic-bags.png';
 
 export const Challenges = () => {
 
@@ -8,34 +11,40 @@ export const Challenges = () => {
             name: 'Plastic hunter',
             description: 'collect 3 plastic bottles',
             points: 15,
-            image: '',
+            image: plasticBottles,
         },
         {
             id: 2,
             name: 'Heavy Metal',
             description: 'collect 5 metal cans',
             points: 15,
-            image: '',
+            image: canImg,
         },
         {
             id: 3,
             name: 'Plastic Exterminator',
             description: 'collect 10 plastic bags',
             points: 35,
-            image: '',
+            image: plasticBags,
         },
     ]
+
   return (
     <article>
-        <h2>Current Challenges</h2>
-            {challenges.map((challenge) => (
-                <div key={challenge.id} className='challenge-container'>
-                    <img src={challenge.image}/>
+        
+        <div className='challenge-container'>
+            {challenges.map((challenge) => (   
+                <div key={challenge.id} className='challenges'>
+                    <div className='challenge-img-container'>
+                        <img src={challenge.image}/>
+                    </div>
                     <h4>{challenge.name}</h4>
                     <p>{challenge.description}</p>
-                    <p>{challenge.points}</p>
+                    <p>Rewards {challenge.points} points</p>
+                    <button>Do it</button>
                 </div>
             ))}
+        </div>    
     </article>
   )
 }

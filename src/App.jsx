@@ -8,8 +8,8 @@ function App() {
   return (
     <BrowserRouter>
       <Header/>
-      {routes}
       <Navbar/>
+      {routes}
       <Footer/>
     </BrowserRouter>
   );
