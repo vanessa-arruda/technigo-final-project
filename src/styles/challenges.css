@@ -1,6 +1,6 @@
 .challenge-container{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     margin: 0 0 4rem 0;
 }
 
@@ -12,11 +12,13 @@
 
 .challenge-img-container{
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    
 }
 
 .challenge-img-container img{
     height: 100%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
 }
 
 .challenges button{
@@ -26,4 +28,12 @@
     font-weight: 600;
     padding: 8px 12px;
     width: 50%;
+    border-radius: 12px;
+}
+
+.challenges button:hover{
+    color: #4B5842;
+    background-color: #C7D59F;
+    cursor: pointer;
+    
 }
