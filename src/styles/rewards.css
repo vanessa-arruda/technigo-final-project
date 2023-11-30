@@ -1,0 +1,26 @@
+.rewards-container{
+    margin: 4px 12px 4px 12px;
+}
+
+.partners-container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.partner-card-container{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
+
+.partner-card-container img{
+    border-radius: 10px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    
+}
