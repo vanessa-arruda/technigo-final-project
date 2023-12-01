@@ -27,7 +27,7 @@ export const Navbar = () => {
             <FaClipboardQuestion />
             <p>Quiz</p>
         </NavLink>
-        <NavLink to='/add' className='navlink'>
+        <NavLink to='/addItem' className='navlink'>
             <MdFormatListBulletedAdd />
             <p>Add new item</p>
         </NavLink>
