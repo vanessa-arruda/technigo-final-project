@@ -1,12 +1,20 @@
 import '../styles/header.css';
 import logo from '../assets/recycle-logo.png';
+import { useSelector } from 'react-redux';
 
-export const Header = () => {
+
+export const Header = ({onLoginClick}) => {
+  const user = useSelector(
+    (state) => state.recycle.loginUser
+  );
   return (
     <header>
+        <button className='loginButton'  onClick={() => onLoginClick()} > 
+         login
+         </button>
         <div className='header-user'>
             <p>Hi,</p>
-            <p>Vanessa!</p>
+            <p>{user}!</p>
         </div>
         <div className='header-logo'>
             <img src={logo} alt='RealCycle logo' width='8%' height='auto'/>
