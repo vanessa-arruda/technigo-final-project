@@ -1,0 +1,94 @@
+
+.first-row{
+    display: grid;
+    grid-template-rows: 1;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    
+}
+
+.first-row-text{
+    grid-column-start: 1;
+    grid-row-start: 1;
+    background-color: #4B5842;
+    height: 100%;
+    color: white;
+    padding: 0 12px;
+}
+
+.first-row-img{
+    grid-column-start: 2;
+    grid-row-start: 1;
+    height: 350px;
+    margin: 0;
+    background-image: url('../assets/unplash-mert-guller-img.jpeg');
+    background-repeat: none;
+    background-size: cover;
+}
+.first-row-img img{
+    height: 100%;
+}
+
+.second-row{
+    display: grid;
+    grid-template-rows: 1;
+    grid-template-columns: 30% 40% 30%;
+    align-items: center;
+    justify-content: center;
+}
+
+.second-row-title{
+    grid-column-start: 1;
+    grid-row-start: 2;
+    background-color:burlywood;
+    height: 100%;
+}
+
+.second-row-title h1{
+    transform: rotate(-90deg);
+    font-size: 36px;
+}
+
+.second-row-text{
+    grid-column-start: 2;
+    grid-row-start: 2;
+    background-color: white;
+    padding: 0 12px;
+}
+
+.empty-container{
+    grid-column-start: 3;
+    grid-row-start: 2;
+    background-color: #C7D59F;
+    height: 100%;
+}
+
+.third-row{
+    display: grid;
+    grid-template-rows: 1;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.third-row-img{
+    grid-column-start: 1;
+    grid-row-start: 3;
+    height: 350px;
+    margin: 0;
+    background-image: url('../assets/unplash-jed-together.jpeg');
+    background-repeat: none;
+    background-size: cover;
+}
+
+.third-row-text{
+    grid-column-start: 2;
+    grid-row-start: 3;
+    background-color: #84754b;
+    height: 100%;
+    color: white;
+    padding: 0 12px;
+}

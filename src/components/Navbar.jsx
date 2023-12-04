@@ -19,9 +19,9 @@ export const Navbar = () => {
             <MdDashboard/>
             <p>User history</p>
         </NavLink>
-        <NavLink to='/tutorial' className='navlink'>
+        <NavLink to='/about' className='navlink'>
             <FaChalkboardTeacher/>
-            <p>Tutorial</p>
+            <p>About</p>
         </NavLink>
         <NavLink to='/quiz' className='navlink'>
             <FaClipboardQuestion />
