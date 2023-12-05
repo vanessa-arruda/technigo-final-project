@@ -1,26 +1,145 @@
 .rewards-container{
-    margin: 4px 12px 4px 12px;
+    margin: 4px 12px 24px 4px;
+}
+
+.rewards-container h1{
+    padding-left: 18px;
+    text-align: start;
 }
 
 .partners-container{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 12px;
+    margin: 0;
 }
 
 .partner-card-container{
-    width: 20%;
+    width: 22%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    flex-wrap: wrap;
-    
+    justify-content: flex-start;
+    flex-wrap: wrap; 
+    margin-top: 16px;
 }
 
 .partner-card-container img{
     border-radius: 10px;
     box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
     width: 80%;
+    margin-top: 8px;
+}
+
+.partner-card-container img:hover{
+    filter:brightness(50%);
+}
+
+.partner-card-container p{
+    padding: 16px;
+    font-size: 14px;
+    height: 60px;
+    text-align: space-around;
     
+}
+
+.partner-card-container h4,
+.partner-card-container p,
+.partner-card-container h3,
+.partner-card-container h2{
+    margin: 0;
+}
+
+.partner-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.partner-card-container h2{
+    font-size: 18px;
+    text-align: center;
+    max-width: 90%;
+}
+
+.partner-card-container h3{
+    font-size: 18px;
+    margin-top: 8px;
+}
+
+.partner-card-container h4{
+    font-size: small;
+    text-decoration: underline;
+}
+
+.rewards-button{
+    border: none;
+    background-color: #8FB339;
+    color: #FFF;
+    font-weight: 600;
+    padding: 8px 12px;
+    width: 60%;
+    border-radius: 12px;
+}
+
+.rewards-filters-container{
+    display: flex;
+    gap: 12px;
+    padding: 8px 16px;
+}
+
+.rewards-filters-container input,
+.rewards-filters-container select  {
+    border-radius: 12px;
+    border: none;
+    padding: 8px 20px;
+}
+
+@media screen and (max-width: 802px){
+    .partner-card-container{
+        width: 25%;
+    }
+    .partner-card-container p{
+        font-size: 14px;
+        text-align: center;
+        width: 80%;
+    }
+
+    .partner-card-container h2{
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 629px){
+    .partner-card-container{
+        width: 33%;
+    }
+
+    .partner-card-container img{
+        width: 90%;
+    }
+
+    .rewards-filters-container{
+        display: flex;
+        gap: 12px;
+        justify-content: center;
+    }
+
+    .rewards-container h1{
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 496px){
+    .rewards-filters-container{
+        display: flex;
+        gap: 12px;
+        justify-content: start;
+        align-items: center;
+        width: 30%;
+    }
+    .partner-card-container{
+        width: 50%;
+    }
 }

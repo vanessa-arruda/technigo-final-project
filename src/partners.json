@@ -45,7 +45,7 @@
             "id": 5,
             "logo":"src/assets/partners-logo/BjornBorg.png",
             "reward_type": "discount",
-            "industry": "Clothing & Accessories",
+            "industry": "Apparel Retail",
             "bonus": ["textil"],
             "points": 2000,
             "reward": "100:- voucher discount"
@@ -111,7 +111,7 @@
             "reward": "50:- discount in food delivery"
         },
         {
-            "name": "Fotografiska Museet",
+            "name": "Fotografiska",
             "id": 12,
             "logo":"src/assets/partners-logo/Fotografiska_logo.png",
             "reward_type": "discount",

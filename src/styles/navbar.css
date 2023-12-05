@@ -24,3 +24,9 @@
 .navlink p{
     margin: 0;
 }
+
+@media screen and (max-width: 496px){
+    .navlink p{
+        display: none;
+    }
+}
