@@ -8,6 +8,11 @@ header{
     background-color: #B7CE63;
     margin: 0;
     border: none;
+    position:fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
 }
 
 .header-user{
@@ -15,12 +20,31 @@ header{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-left: 8px;
+    padding-left: 12px;
+}
+
+.header-points{
+    padding-right: 12px;
 }
 .header-user p,
 .header-points p{
     margin: 0;
 }
+
+.header-points h3{
+    font-size: 16px;
+    margin: 0;
+    padding-bottom: 4px;
+}
+
+.header-points p{
+    padding: 8px 30px;
+    background-color: #fff;
+    border-radius: 16px;
+    color: black;
+    font-weight: 700;
+}
+
 .header-logo,
 .header-points{
     display: flex;
@@ -35,7 +59,7 @@ header{
     color: #fff;
 }
 .header-logo img{
-    margin-top: 1rem;
+    margin-top: 0.5rem;
 }
 
 .header-points{

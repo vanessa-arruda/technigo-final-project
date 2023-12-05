@@ -1,3 +1,8 @@
+.about-wrapper{
+    width: 75%;
+    height: auto;
+    margin: auto;
+}
 
 .first-row{
     display: grid;
@@ -5,7 +10,7 @@
     grid-template-columns: 50% 50%;
     align-items: center;
     justify-content: center;
-    margin: 0;
+    margin: 114px 0 0 0;
     
 }
 

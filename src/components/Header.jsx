@@ -22,7 +22,7 @@ export const Header = ({onLoginClick}) => {
             <p>{user}!</p>
         </div>
         <div className='header-logo'>
-            <img src={logo} alt='RealCycle logo' width='8%' height='auto'/>
+            <img src={logo} alt='RealCycle logo' width='6%' height='auto'/>
             <h1>RealCycle App</h1>
         </div>
         <div className='header-points'>

@@ -1,7 +1,9 @@
 .challenge-container{
+    margin: 0;
     display: flex;
-    justify-content: space-evenly;
-    margin: 0 0 4rem 0;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .challenges{
@@ -10,15 +12,14 @@
     align-items: center;
 }
 
-.challenge-img-container{
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    
-}
-
 .challenge-img-container img{
-    height: 100%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     border-radius: 12px;
+    width: 100%;
+}
+
+.challenge-text{
+    text-align: center;
 }
 
 .challenges button{
@@ -27,7 +28,7 @@
     color: #FFF;
     font-weight: 600;
     padding: 8px 12px;
-    width: 50%;
+    width: 30%;
     border-radius: 12px;
 }
 
