@@ -3,7 +3,7 @@
         {
             "name": "Ikea",
             "id": 1,
-            "logo":"src/assets/partners-logo/ikea_logo.png",
+            "logo":"/partners-logo/Ikea_logo.png",
             "reward_type": "discount",
             "industry": "furniture",
             "bonus": ["paper", "metal", "glass", "plastic", "battery", "textil", "organic"],
@@ -13,7 +13,7 @@
         {
             "name": "Volvo",
             "id": 2,
-            "logo":"src/assets/partners-logo/volvo.png",
+            "logo":"/partners-logo/volvo.png",
             "reward_type": "discount",
             "industry": "Automotive",
             "bonus":["plastic", "battery", "textil"],
@@ -23,7 +23,7 @@
         {
             "name": "H&M",
             "id": 3,
-            "logo":"src/assets/partners-logo/H&M-logo.png",
+            "logo":"/partners-logo/H&M-logo.png",
             "reward_type": "discount",
             "industry": "Apparel Retail",
             "bonus": ["textil"],
@@ -33,7 +33,7 @@
         {
             "name": "ICA",
             "id": 4,
-            "logo":"src/assets/partners-logo/ICA-logotyp.png",
+            "logo":"/partners-logo/ICA-logotyp.png",
             "reward_type": "discount",
             "industry": "Food Retail",
             "bonus": ["paper", "metal", "glass"],
@@ -43,7 +43,7 @@
         {
             "name": "Björn Borg",
             "id": 5,
-            "logo":"src/assets/partners-logo/BjornBorg.png",
+            "logo":"/partners-logo/BjornBorg.png",
             "reward_type": "discount",
             "industry": "Apparel Retail",
             "bonus": ["textil"],
@@ -53,7 +53,7 @@
         {
             "name": "Ellos",
             "id": 6,
-            "logo":"src/assets/partners-logo/logo-ellos.png",
+            "logo":"/partners-logo/logo-ellos.png",
             "reward_type": "discount",
             "industry":"Furniture",
             "bonus": ["plastic","textil"],
@@ -63,7 +63,7 @@
         {
             "name": "In & Finn",
             "id": 7,
-            "logo":"src/assets/partners-logo/inochfinnlogo.png",
+            "logo":"/partners-logo/inochfinnlogo.png",
             "reward_type": "discount",
             "industry": "Home",
             "bonus": ["glass", "plastic", "battery"],
@@ -73,7 +73,7 @@
         {
             "name": "Scandic Hotels",
             "id": 8,
-            "logo":"src/assets/partners-logo/scandic-hotels.png",
+            "logo":"/partners-logo/scandic-hotels.png",
             "reward_type": "discount",
             "industry": "Hotel",
             "bonus": ["battery", "textil"],
@@ -83,7 +83,7 @@
         {
             "name": "Norwegian Airlines",
             "id": 9,
-            "logo":"src/assets/partners-logo/norwegian-logo.png",
+            "logo":"/partners-logo/norwegian-logo.png",
             "reward_type": "discount",
             "industry": "Travel",
             "bonus": ["plastic", "battery", "organic"],
@@ -93,7 +93,7 @@
         {
             "name": "Viaplay",
             "id": 10,
-            "logo":"src/assets/partners-logo/viaplay.png",
+            "logo":"/partners-logo/viaplay.png",
             "reward_type": "discount",
             "industry": "Entertainment",
             "bonus": ["plastic"],
@@ -103,7 +103,7 @@
         {
             "name": "Foodora",
             "id": 11,
-            "logo":"src/assets/partners-logo/foodora-logo.png",
+            "logo":"/partners-logo/foodora-logo.png",
             "reward_type": "discount",
             "industry": "Food Delivery",
             "bonus": ["paper"],
@@ -113,7 +113,7 @@
         {
             "name": "Fotografiska",
             "id": 12,
-            "logo":"src/assets/partners-logo/Fotografiska_logo.png",
+            "logo":"/partners-logo/Fotografiska_logo.png",
             "reward_type": "discount",
             "industry": "Entertainment",
             "bonus": ["paper", "plastic"],
@@ -123,7 +123,7 @@
         {
             "name": "Coca-Cola",
             "id": 13,
-            "logo":"src/assets/partners-logo/coca-cola-logo.png",
+            "logo":"/partners-logo/coca-cola-logo.png",
             "reward_type": "product",
             "industry": "Beverage",
             "bonus": ["glass", "metal"],
@@ -133,7 +133,7 @@
         {
             "name": "Lyko",
             "id": 14,
-            "logo":"src/assets/partners-logo/lyko.png",
+            "logo":"/partners-logo/lyko.png",
             "reward_type": "discount",
             "industry": "Personal Care",
             "bonus": ["plastic"],
@@ -143,7 +143,7 @@
         {
             "name": "The Body Shop",
             "id": 15,
-            "logo":"src/assets/partners-logo/thebodyshop.png",
+            "logo":"/partners-logo/thebodyshop.png",
             "reward_type": "discount",
             "industry": "Personal Care",
             "bonus": ["plastic"],
@@ -153,7 +153,7 @@
         {
             "name": "Rituals",
             "id": 16,
-            "logo":"src/assets/partners-logo/rituals-logo.png",
+            "logo":"/partners-logo/rituals-logo.png",
             "reward_type": "discount",
             "industry": "Personal Care",
             "bonus": ["plastic"],
