@@ -3,7 +3,12 @@
     justify-content: space-around;
     background-color: #8FB339;
     font-weight: 400;
-    padding: 0rem;
+    padding: 0rem 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 10;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
 }
 
 .navlink{
@@ -23,10 +28,22 @@
 
 .navlink p{
     margin: 0;
+    font-size: 14px;
+}
+
+.nav-icon{
+    font-size: 32px;
 }
 
 @media screen and (max-width: 496px){
+    .navBar {
+        padding: 0 0.8rem;
+    }
     .navlink p{
-        display: none;
+        font-size: 12px;
+    }
+
+    .nav-icon{
+        font-size: 32px;
     }
 }

@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import Modal from 'react-modal';
 import { loginUser } from '../reducers/recycle'; 
+import '../styles/loginModal.css';
 
 Modal.setAppElement('#root');
 

@@ -14,9 +14,7 @@
 
 body {
   margin: 0;
-  display: flex;
   place-items: center;
   font-family: 'Lato', sans-serif;
-  justify-content: center;
   background-color: #DADDD8;
 }
