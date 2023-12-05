@@ -3,10 +3,15 @@ import logo from '../assets/recycle-logo.png';
 import { useSelector } from 'react-redux';
 
 
+
 export const Header = ({onLoginClick}) => {
   const user = useSelector(
     (state) => state.recycle.loginUser
   );
+    const point =useSelector(
+      (state) => state.recycle.users.find(u =>u.userName===user).points
+    )
+
   return (
     <header>
         <button className='loginButton'  onClick={() => onLoginClick()} > 
@@ -22,7 +27,7 @@ export const Header = ({onLoginClick}) => {
         </div>
         <div className='header-points'>
             <h3>Current Points</h3>
-            <p>300</p>
+            <p>{point}</p>
         </div>
     </header>
   )
