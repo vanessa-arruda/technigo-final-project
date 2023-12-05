@@ -41,46 +41,49 @@ export const Rewards = () => {
   return (
     <article className='rewards-container'>
       <h1>List of Partners and Rewards</h1>
-        <div>
-          {/* filter input */}
-          <input
-            type='text'
-            placeholder='Filter by name'
-            value={filter}
-            onChange={(e) => setFilter(e.target.value)}
-          />
-          {/* sort by Name/points */}
-          <select
-            value={sortBy}
-            onChange={(e) => setSortBy(e.target.value)}
-          >
-            <option value='name'>Name</option>
-            <option value='points'>Points</option>
-            <option value='industry'>Industry</option>
-          </select>
-          {/* sort by Asc/Desc */}
-          <select
-            value={sortOrder}
-            onChange={(e) => setSortOrder(e.target.value)}
-          >
-            <option value='asc'>Ascending</option>
-            <option value='desc'>Descending</option>
-          </select>
-        </div>
-        <section className='partners-container'>
-            {partners.map((data) => (
-                <div 
-                key={data.id}
-                className='partner-card-container'
-                >
-                    <h2>{data.name}</h2>
-                    <img src={data.logo} alt={data.name}/>
-                    <h3>{data.industry}</h3>
-                    <h4>Points needed: {data.points}</h4>
-                    <p>Reward: {data.reward}</p>
-                    <button>Exchange Points</button>
+      <div className='rewards-filters-container'>
+        {/* filter input */}
+        <input
+          className='partners-input'
+          type='text'
+          placeholder='Filter by name'
+          value={filter}
+          onChange={(e) => setFilter(e.target.value)}
+        />
+        {/* sort by Name/points */}
+        <select
+          value={sortBy}
+          onChange={(e) => setSortBy(e.target.value)}
+        >
+          <option value='name'>Name</option>
+          <option value='points'>Points</option>
+          <option value='industry'>Industry</option>
+        </select>
+        {/* sort by Asc/Desc */}
+        <select
+          value={sortOrder}
+          onChange={(e) => setSortOrder(e.target.value)}
+        >
+          <option value='asc'>Ascending</option>
+          <option value='desc'>Descending</option>
+        </select>
+      </div>
+      <section className='partners-container'>
+          {partners.map((data) => (
+              <div 
+              key={data.id}
+              className='partner-card-container'
+              >
+                <div className='partner-text'>
+                  <h2>{data.name}</h2>
+                  <img src={data.logo} alt={data.name}/>
+                  <h3>{data.industry}</h3>
+                  <h4>Points needed: {data.points}</h4>
+                  <p>Reward: {data.reward}</p>
                 </div>
-            ))}
+                <button className='rewards-button'>Exchange Points</button>
+              </div>
+          ))}
         </section>
     </article>
   )

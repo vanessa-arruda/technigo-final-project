@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,400;0,600;1,100;1,400;1,600&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,400;1,700&family=Righteous&display=swap');
 
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -17,7 +16,7 @@ body {
   margin: 0;
   display: flex;
   place-items: center;
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'Lato', sans-serif;
   justify-content: center;
   background-color: #DADDD8;
 }
