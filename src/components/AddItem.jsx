@@ -40,14 +40,15 @@ export const ItemSelector = () => {
         <option value="metal">Metal</option>
         <option value="paper">Paper</option>
         <option value="glass">glass</option>
-        <option value="other2">Other 2</option>
+        <option value="other2">Battery</option>
+        <option value="other2">Textil</option>
       </select>
 
       {selectedItem && (
         <p className="selected-item">You selected: {selectedItem}</p>
       )}
 
-      <button onClick={handleAddItem} disabled={!selectedItem}>
+      <button className="add-items-btn" onClick={handleAddItem} disabled={!selectedItem}>
         Add
       </button>
       <div className="selected-items-container">
@@ -57,7 +58,7 @@ export const ItemSelector = () => {
             <li key={index}>{item}</li>
           ))}
         </ul>
-        <button onClick={handleSubmit} disabled={!selectedItems.length}>
+        <button className="submit-btn" onClick={handleSubmit} disabled={!selectedItems.length}>
           submit
         </button>
       </div>
