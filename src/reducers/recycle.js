@@ -66,12 +66,14 @@ const questions =
 ];
 
 const initialState = {
+  //Authentication
   users: [
     { userName: "Guest", password: "", points: 0 },
-    { userName: "behrouz", password: "1", points: 0 },
-    { userName: "vanessa", password: "2", points: 0 },
+    { userName: "behrouz", password: "1", points: 100 },
+    { userName: "vanessa", password: "2", points: 470 },
   ],
   loginUser: "Guest",
+  //Quiz
   questions,
   answers: [],
   currentQuestionIndex: 0,
@@ -81,7 +83,7 @@ const initialState = {
 };
 
 
-
+//quiz
 export const userSlice = createSlice({
   name: "recycle",
   initialState,
@@ -149,10 +151,10 @@ export const userSlice = createSlice({
     
 
     decreasePoints: (state, action) => {
-      const { userName, pointsToAdd } = action.payload;
+      const { userName, pointsToRemove } = action.payload;
       const updatedUsers = state.users.map((user) => {
         if (user.userName === userName) {
-          return { ...user, points: user.points - pointsToAdd };
+          return { ...user, points: user.points - pointsToRemove };
         }
         return user;
       });

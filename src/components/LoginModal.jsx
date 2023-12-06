@@ -19,11 +19,12 @@ const LoginModal = ({ isOpen, onClose }) => {
 
   return (
     <Modal isOpen={isOpen} onRequestClose={onClose} contentLabel="Login Modal">
-      <div>
+      <div className="authentication-modal">
         <label htmlFor="usernameInput">Enter Username:</label>
         <input
           type="text"
           id="usernameInput"
+          placeholder="Type username..."
           value={enteredUsername}
           onChange={(e) => setEnteredUsername(e.target.value)}
         />

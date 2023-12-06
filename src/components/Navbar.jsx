@@ -20,12 +20,12 @@ export const Navbar = () => {
         </IconContext.Provider>
             <p>Rewards</p>
         </NavLink>
-        <NavLink to='/history' className='navlink'>
+        {/* <NavLink to='/history' className='navlink'>
         <IconContext.Provider value={{className: 'nav-icon'}}>
             <MdDashboard/>
         </IconContext.Provider>
             <p>User history</p>
-        </NavLink>
+        </NavLink> */}
         <NavLink to='/about' className='navlink'>
         <IconContext.Provider value={{className: 'nav-icon'}}>
             <FaChalkboardTeacher/>
