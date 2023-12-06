@@ -127,7 +127,7 @@
             "reward_type": "product",
             "industry": "Beverage",
             "bonus": ["glass", "metal"],
-            "points": 500,
+            "points": 100,
             "reward": "1 free coca-cola 250ml in any place"
         },
         {

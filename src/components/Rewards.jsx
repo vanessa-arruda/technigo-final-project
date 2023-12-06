@@ -1,14 +1,16 @@
 import '../styles/rewards.css';
 import partnersData from '../partners.json';
 import { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { decreasePoints } from '../reducers/recycle';
 
 export const Rewards = () => {
   const [partners, setPartners] = useState(partnersData.partners);
   const [filter, setFilter] = useState('');
   const [sortBy, setSortBy] = useState('name');
   const [sortOrder, setSortOrder] = useState('asc');
-
-
+  const dispatch = useDispatch();
+  const loginUser = useSelector((state) => state.recycle.loginUser);
 
   useEffect (() => {
     let newPartnersList = [...partnersData.partners];
@@ -38,6 +40,12 @@ export const Rewards = () => {
     console.log(partners);
   }, [partners]);
   
+  const handlePointsExchange = () => {
+    // Dispatch the increasePoints action to add 10 points
+    dispatch(decreasePoints ({ userName: loginUser, pointsToRemove: 10 }));
+    // console.log (loginUser);
+  }
+
   return (
     <article className='rewards-container'>
       <h1>List of Partners and Rewards</h1>
@@ -81,7 +89,7 @@ export const Rewards = () => {
                   <h4>Points needed: {data.points}</h4>
                   <p>Reward: {data.reward}</p>
                 </div>
-                <button className='rewards-button'>Exchange Points</button>
+                <button className='rewards-button' onClick={handlePointsExchange}>Exchange Points</button>
               </div>
           ))}
         </section>
