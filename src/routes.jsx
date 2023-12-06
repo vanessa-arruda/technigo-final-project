@@ -4,7 +4,7 @@ import { Rewards } from './components/Rewards';
 import { About } from './components/About';
 import { NotFoundPage } from './components/NotFoundPage';
 import { ItemSelector } from './components/AddItem';
-
+import { CurrentQuestion } from './components/CurrentQuestion';
 
 const routes = (
     <Routes>
@@ -12,6 +12,7 @@ const routes = (
         <Route path='/rewards' element={<Rewards />} />
         <Route path='/about' element={<About />} />
         <Route path='/AddItem' element={<ItemSelector />} />
+        <Route path='/Quiz' element={<CurrentQuestion />} />
         <Route path='*' element={<NotFoundPage/>}/>
     </Routes>
 )
