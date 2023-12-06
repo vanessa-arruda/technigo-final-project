@@ -78,7 +78,7 @@ export const ItemSelector = () => {
     <div className="item-selector-container">
       <div className="selectedItem-img-items-container">
         <div className="material-img">
-          <img src={selectedItem.img || greenBin }/>
+          <img alt={selectedItem.name} src={selectedItem.img || greenBin}/>
         </div>
         <div className="selectedItem-container">
           <label htmlFor="itemSelect">Choose an item:</label>

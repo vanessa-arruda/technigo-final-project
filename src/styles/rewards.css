@@ -139,10 +139,10 @@
 @media screen and (max-width: 496px){
     .rewards-filters-container{
         display: flex;
-        gap: 12px;
+        flex-direction: column;
+        gap: 8px;
         justify-content: start;
         align-items: center;
-        width: 30%;
     }
     .partner-card-container{
         width: 50%;

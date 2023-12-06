@@ -1,5 +1,5 @@
 .about-wrapper{
-    width: 75%;
+    width: 96%;
     height: auto;
     margin: auto;
 }
@@ -10,7 +10,7 @@
     grid-template-columns: 50% 50%;
     align-items: center;
     justify-content: center;
-    margin: 114px 0 0 0;
+    margin: 140px 0 0 0;
     
 }
 
@@ -76,6 +76,7 @@
     grid-template-columns: 50% 50%;
     align-items: center;
     justify-content: center;
+    margin-bottom: 24px;
     
 }
 
@@ -96,4 +97,71 @@
     height: 100%;
     color: white;
     padding: 0 12px;
+}
+
+@media screen and (max-width: 750px){
+    .about-wrapper{
+        width: 100%;
+    }
+
+    .first-row-img{
+        height:200px;
+    }
+
+    .second-row{
+        grid-template-columns: 15% 70% 15%;
+    }
+
+    .second-row-title h1{
+        font-size: 28px;
+    }
+    .third-row-img{
+        height: 500px;
+        background-image: url('../assets/unplash-jed-together.jpeg');
+        background-repeat: none;
+        background-size: cover;
+    }
+}
+
+@media screen and (max-width: 457px){
+
+    .second-row-title{
+        font-size: 14px;
+    }
+    .third-row{
+        display: grid;
+        grid-template-rows: 2;
+        grid-template-columns: 100%;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 24px;
+        width: 100%;
+    }
+    
+    .third-row-text{
+        grid-column-start: 1;
+        grid-row-start: 2;
+        background-color: #84754b;
+        color: white;
+        padding: 0 12px;
+    }
+    .second-row{
+        display: grid;
+        grid-template-rows: 1;
+        grid-template-columns: 1;
+        align-items: center;
+        justify-content: center;
+    }
+    .second-row-title{
+        display: none;
+    }
+
+    .empty-container{
+        display: none;
+    }
+    .second-row-text{
+        grid-column-start: 100%;
+        grid-row-start: 1;
+    }
+
 }
