@@ -10,7 +10,13 @@ export const Rewards = () => {
   const [sortBy, setSortBy] = useState('name');
   const [sortOrder, setSortOrder] = useState('asc');
   const dispatch = useDispatch();
-  const loginUser = useSelector((state) => state.recycle.loginUser);
+  const { loginUser, userPoints } = useSelector((state) => {
+    const currentUser = state.recycle.users.find((user) => user.userName === state.recycle.loginUser)
+    return {
+      loginUser: state.recycle.loginUser,
+      userPoints: currentUser.points,
+    }
+  });
 
   useEffect (() => {
     let newPartnersList = [...partnersData.partners];
@@ -25,7 +31,7 @@ export const Rewards = () => {
     const order = (sortOrder === 'asc') ? 1 : -1;
     newPartnersList.sort((a, b) => {
       if (sortBy === "points") {
-        return (b[sortBy] - a[sortBy]) * order;
+        return (a[sortBy] - b[sortBy]) * order;
       }
       return (
           a[sortBy].localeCompare(b[sortBy]) * order
@@ -40,10 +46,10 @@ export const Rewards = () => {
     console.log(partners);
   }, [partners]);
   
-  const handlePointsExchange = () => {
-    // Dispatch the increasePoints action to add 10 points
-    dispatch(decreasePoints ({ userName: loginUser, pointsToRemove: 10 }));
-    // console.log (loginUser);
+  const handlePointsExchange = (points) => {
+    if(userPoints > points){
+      dispatch(decreasePoints ({ userName: loginUser, pointsToRemove: points }));
+    }
   }
 
   return (
@@ -89,7 +95,7 @@ export const Rewards = () => {
                   <h4>Points needed: {data.points}</h4>
                   <p>Reward: {data.reward}</p>
                 </div>
-                <button className='rewards-button' onClick={handlePointsExchange}>Exchange Points</button>
+                <button className='rewards-button' onClick={() => handlePointsExchange(data.points)}>Exchange Points</button>
               </div>
           ))}
         </section>
