@@ -8,123 +8,104 @@ import batteries from "../../public/batteries.jpeg";
 import glassBottles from "../../public/glassbottles.jpeg";
 import metalCans from "../../public/metal-cans.jpeg";
 import paper from "../../public/paper.jpeg";
+import greenBin from "../../public/green-bin.jpeg";
 
 export const ItemSelector = () => {
-  const [selectedItem, setSelectedItem] = useState("");
+  const [selectedItem, setSelectedItem] = useState({});
   const [selectedItems, setSelectedItems] = useState([]);
-  const [materialImg, setMaterialImg] = useState("");
 
   const dispatch = useDispatch();
   const loginUser = useSelector((state) => state.recycle.loginUser);
 
   const handleSelectChange = (event) => {
-    setSelectedItem(event.target.value);
-    // setMaterialImg(
+    if(event.target.value) {
+      setSelectedItem(itemsObjList[event.target.value]);
+    } else{
+      setSelectedItem({});
+    }
 
-    //   let imgUrl;
-    //   switch(materialImg){
-    //     case "plastic":
-    //       imgUrl = plasticBottles;
-    //       break;
-    //     case "metal":
-    //       imgUrl = metalCans;
-    //       break;
-    //     case "glass":
-    //       imgUrl = glassBottles;
-    //       break;
-    //     case "paper":
-    //       imgUrl = paper;
-    //       break;
-    //     case "batteries":
-    //       imgUrl = batteries;
-    //       break;
-    //   }
-    // )
   };
 
   const handleSubmit = () => {
-      // Dispatch the increasePoints action to add 10 points
-      dispatch(increasePoints({ userName: loginUser, pointsToAdd: selectedItems.length*10 }));
-      // console.log (loginUser);
-      setSelectedItems([]);
+    const totalPoints = selectedItems.reduce(
+      (accumulator, currentItem) => accumulator + currentItem.point, 0
+    );
+    dispatch(increasePoints({ userName: loginUser, pointsToAdd: totalPoints}));
+    setSelectedItems([]);
     
   };
   const handleAddItem = () => {
-    if (selectedItem) {
+    if (Object.keys(selectedItem).length > 0) {
       setSelectedItems((prevItems) => [...prevItems, selectedItem]);
-      setSelectedItem("");
+      setSelectedItem({});
     }
   };
 
-  const itemsObjList = [
-    {
-    id: 1,
-    name: "plastic",
-    img: {plasticBottles},
-    point: 10,
+  const itemsObjList = {
+    plastic: {
+      id: 1,
+      name: "plastic",
+      img: plasticBottles,
+      point: 10,
     },
-    { 
+    metal: { 
       id: 2,
       name: "metal",
-      img: {metalCans},
+      img: metalCans,
       point: 8,
     },
-    {
+    glass: {
       id: 3,
       name: "glass",
-      img: {glassBottles},
+      img: glassBottles,
       point: 7,
     },
-    {
+    paper: {
       id: 4,
       name: "paper",
-      img: {paper},
+      img: paper,
       point: 6,
     },
-    {
+    battery: {
       id: 5,
-      name: "batterie",
-      img: {batteries},
+      name: "battery",
+      img: batteries,
       point: 6,
     },
-]
+  }
 
   return (
     <div className="item-selector-container">
-      <label htmlFor="itemSelect">Choose an item:</label>
-      <select
-        id="itemSelect"
-        value={selectedItem}
-        onChange={handleSelectChange}
-      >
-        <option value="">Select an item</option>
-        {itemsObjList.map((item) => (
-        <option key={item.id} value={item.name}>{item.name}</option>
-        ))}
-
-        {/* <option value="plastic">Plastic</option>
-        <option value="metal">Metal</option>
-        <option value="paper">Paper</option>
-        <option value="glass">glass</option>
-        <option value="other2">Battery</option>
-        <option value="other2">Textil</option> */}
-      </select>
-      <div className="material-img">
-        <img src={metalCans}/>
+      <div className="selectedItem-img-items-container">
+        <div className="material-img">
+          <img src={selectedItem.img || greenBin }/>
+        </div>
+        <div className="selectedItem-container">
+          <label htmlFor="itemSelect">Choose an item:</label>
+          <select
+            id="itemSelect"
+            value={selectedItem.name}
+            onChange={handleSelectChange}
+          >
+            <option value="">Select an item</option>
+            {Object.values(itemsObjList).map((item) => (
+              <option key={item.id} value={item.name}>{item.name}</option>
+            ))}
+          </select>
+          {selectedItem && Object.keys(selectedItem).length > 0 && (
+            <p className="selected-item">You selected: {selectedItem.name}</p>
+          )}
+          <button className="add-items-btn" onClick={handleAddItem} disabled={!selectedItem}>
+            Add
+          </button>
+        </div>
       </div>
 
-      {selectedItem && (
-        <p className="selected-item">You selected: {selectedItem}</p>
-      )}
-
-      <button className="add-items-btn" onClick={handleAddItem} disabled={!selectedItem}>
-        Add
-      </button>
       <div className="selected-items-container">
         <h2>Selected Items:</h2>
         <ul>
           {selectedItems.map((item, index) => (
-            <li key={index}>{item}</li>
+            <li key={index}>{item.name} ({item.point} points)</li>
           ))}
         </ul>
         <button className="submit-btn" onClick={handleSubmit} disabled={!selectedItems.length}>
