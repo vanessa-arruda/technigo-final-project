@@ -2,14 +2,14 @@
 .item-selector-container {
     display: flex;
     flex-direction: column;
-    max-width: 50%;
-    margin: 140px auto;
+    max-width: 100%;
+    margin-top: 135px;
+    margin-bottom: 24px;
     border: 1px solid #fff;
     align-items: center;
     background-color: #C7D59F;
     border-radius: 12px;
     gap: 12px;
-
   }
 
   .item-selector-container label{
@@ -20,8 +20,8 @@
   }
   
   #itemSelect {
-    width: 50%;
-    padding: 8px;
+    width: 100%;
+    padding: 8px 16px;
     margin-top: 5px;
     box-sizing: border-box;
     border: none;
@@ -40,18 +40,18 @@
   }
   
   .selected-item {
-    margin-top: 20px;
+    margin-top: 24px;
     color: green;
     font-weight: bold;
     width: 100%;
     text-align: center;
     text-transform: capitalize;
-    font-size: 20px;
+    font-size: 16px;
   }
 
   .add-items-btn{
-    width: 30%;
-    margin-top: 16px;
+    width: 80%;
+    margin-top: 8px;
     border: none;
     background-color: #4B5842;
     color: #FFF;
@@ -70,13 +70,27 @@
     margin: 8px;
   }
 
+  .selectedItem-img-items-container{
+    display: flex;
+    justify-content: space-around;
+    margin: 24px;
+  }
+
+  .selectedItem-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+
   .material-img{
-    width: 150px;
+    width: 40%;
     height: auto;
   }
 
   .material-img img{
     width: 100%;
+    border-radius: 12px;
   }
   
   ul{
@@ -86,7 +100,8 @@
   li{
     list-style-type:none;
     text-transform: capitalize;
-    text-align: center;
+    text-align: left;
     margin: 0;
     font-weight: 700;
+    color: green;
   }
