@@ -6,12 +6,13 @@ import { IconContext } from 'react-icons';
 import { GrChapterNext } from 'react-icons/gr';
 import { MdOutlineRestartAlt } from 'react-icons/md';
 import "../styles/CurrentQuestion.css";
+import qData from '../questions.json';
 
 
 export const CurrentQuestion = () => {
-  const question = useSelector(
-    (state) => state.recycle.questions[state.recycle.currentQuestionIndex]
-  );
+
+  const question =useSelector((state) => qData.questions[state.recycle.currentQuestionIndex]);
+    
   const loginUser = useSelector((state) => state.recycle.loginUser);
   const dispatch = useDispatch();
   
@@ -53,7 +54,7 @@ export const CurrentQuestion = () => {
     alert(`your score is: ${recycle.score} `);
     dispatch(increasePoints({ userName: loginUser, pointsToAdd: recycle.score }));
   };
-  console.log(recycle.currentQuestionIndex ,recycle.questions.length);
+ // console.log(recycle.currentQuestionIndex ,recycle.questions.length);
   return (
     <main className="quiz-container">
       <h1 className="quiz-question">Question: {question.questionText}</h1>
@@ -73,13 +74,13 @@ export const CurrentQuestion = () => {
             <IconContext.Provider value={{className:"answer-icon"}}>
               <FaRegCheckCircle />
             </IconContext.Provider>
-            {withImage && <img className="fixed-image-size" src={question.optionsImages[index]} alt={option} />}
+
             {option}
           </button>
         ))}
       </div>
       <div className="flip-card-container">
-        {withImage && <img className="img hidden" src={question.optionsImages[0]} alt={question.options[0]} />}
+        <img className="img hidden" src={question.optionsImages} alt={"image"} />
         <p className="explanation hidden">{question.explanation}</p>
       </div>
       {answer && (
@@ -94,8 +95,8 @@ export const CurrentQuestion = () => {
       <button className="btn" onClick={handleRestart}>
         Restart <MdOutlineRestartAlt />
       </button>
-      <button className="btn" onClick={recycle.currentQuestionIndex === recycle.questions.length - 1 ? handleFinish : handleNext}>
-        {recycle.currentQuestionIndex === recycle.questions.length - 1 ? 'Finish' : 'Next'} <GrChapterNext />
+      <button className="btn" onClick={recycle.currentQuestionIndex === qData.questions.length - 1 ? handleFinish : handleNext}>
+        {recycle.currentQuestionIndex === qData.questions.length - 1 ? 'Finish' : 'Next'} <GrChapterNext />
       </button>
        </section>
     </main>
