@@ -14,15 +14,15 @@ export const Header = ({onLoginClick}) => {
 
   return (
     <header>
-        <button className='loginButton'  onClick={() => onLoginClick()} > 
-         login
-         </button>
+
         <div className='header-user'>
-            <p>Hi,</p>
-            <p>{user}!</p>
+          <button className='loginButton'  onClick={() => onLoginClick()} > 
+            login
+          </button>
+          <p>Hi, {user}!</p>
         </div>
         <div className='header-logo'>
-            <img src={logo} alt='RealCycle logo' width='6%' height='auto'/>
+            <img src={logo} alt='RealCycle logo' width='60px' height='60px'/>
             <h1>RealCycle App</h1>
         </div>
         <div className='header-points'>

@@ -1,7 +1,7 @@
 import '../styles/challenges.css';
 import canImg from '../assets/metal-cans.png';
 import plasticBottles from '../assets/plastic-bottles.png';
-import plasticBags from '../assets/plastic-bags.png';
+import plasticBags from '../assets/plastic-bags.webp';
 import glassPaperPlastic from '../assets/glass-paper-plastic-recycle.png';
 
 export const Challenges = () => {
