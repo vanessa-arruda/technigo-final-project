@@ -1,8 +1,8 @@
 import '../styles/challenges.css';
-import canImg from '../assets/metal-cans.png';
-import plasticBottles from '../assets/plastic-bottles.png';
+import canImg from '../assets/metal-cans.webp';
+import plasticBottles from '../assets/plastic-bottles.webp';
 import plasticBags from '../assets/plastic-bags.webp';
-import glassPaperPlastic from '../assets/glass-paper-plastic-recycle.png';
+import glassPaperPlastic from '../assets/glass-paper-plastic-recycle.webp';
 
 export const Challenges = () => {
 
