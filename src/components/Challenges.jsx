@@ -43,7 +43,7 @@ export const Challenges = () => {
             {challenges.map((challenge) => (   
                 <div key={challenge.id} className='challenges'>
                     <div className='challenge-img-container'>
-                        <img src={challenge.image} alt={`${challenge.description} photo`}/>
+                        <img src={challenge.image} alt={`${challenge.description} photo`} width="200px" height="auto"/>
                     </div>
                     <div className='challenge-text'>
                         <h4>{challenge.name}</h4>
