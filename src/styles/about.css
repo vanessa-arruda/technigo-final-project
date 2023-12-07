@@ -53,8 +53,10 @@
 }
 
 .second-row-title h1{
-    transform: rotate(-90deg);
+    text-align: center;
+    margin-top: 120px;
     font-size: 36px;
+
 }
 
 .second-row-text{
