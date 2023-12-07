@@ -1,5 +1,5 @@
 import '../styles/header.css';
-import logo from '../assets/recycle-logo.png';
+import logo from '../assets/recycle-logo.webp';
 import { useSelector } from 'react-redux';
 
 

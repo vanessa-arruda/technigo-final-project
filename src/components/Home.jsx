@@ -1,6 +1,6 @@
 import '../styles/home.css';
 import { Challenges } from '../components/Challenges';
-import dailyQuiz from '../../public/daily-quiz-ss.jpeg';
+import dailyQuiz from '../../public/daily-quiz-ss.webp';
 
 export const Home = () => {
   return (
