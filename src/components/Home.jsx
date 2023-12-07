@@ -13,7 +13,7 @@ export const Home = () => {
         {/* <h2>User History Overview</h2> */}
         <h2>Daily Quiz</h2>
         <div className='home-quiz-container'>
-          <img src={dailyQuiz} alt="daily quiz"/>
+          <img src={dailyQuiz} alt="daily quiz" width="200px" height="auto"/>
           <p>Take the chance to win up to more 5 points with our daily quiz!</p>
         </div>
     </main>
