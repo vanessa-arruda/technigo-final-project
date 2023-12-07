@@ -3,12 +3,12 @@ import { useDispatch, useSelector } from "react-redux";
 import { increasePoints } from "../reducers/recycle";
 import "../styles/addItem.css";
 
-import plasticBottles from "../../public/plastic-bottles.jpeg";
-import batteries from "../../public/batteries.jpeg";
-import glassBottles from "../../public/glassbottles.jpeg";
-import metalCans from "../../public/metal-cans.jpeg";
-import paper from "../../public/paper.jpeg";
-import greenBin from "../../public/green-bin.jpeg";
+import plasticBottles from "../../public/plastic-bottles.webp";
+import batteries from "../../public/batteries.webp";
+import glassBottles from "../../public/glassbottles.webp";
+import metalCans from "../../public/metal-cans.webp";
+import paper from "../../public/paper.webp";
+import greenBin from "../../public/green-bin.webp";
 
 export const ItemSelector = () => {
   const [selectedItem, setSelectedItem] = useState({});
@@ -78,7 +78,7 @@ export const ItemSelector = () => {
     <div className="item-selector-container">
       <div className="selectedItem-img-items-container">
         <div className="material-img">
-          <img src={selectedItem.img || greenBin }/>
+          <img alt={selectedItem.name} src={selectedItem.img || greenBin}/>
         </div>
         <div className="selectedItem-container">
           <label htmlFor="itemSelect">Choose an item:</label>

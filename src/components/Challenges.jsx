@@ -1,8 +1,8 @@
 import '../styles/challenges.css';
-import canImg from '../assets/metal-cans.png';
-import plasticBottles from '../assets/plastic-bottles.png';
-import plasticBags from '../assets/plastic-bags.png';
-import glassPaperPlastic from '../assets/glass-paper-plastic-recycle.png';
+import canImg from '../assets/metal-cans.webp';
+import plasticBottles from '../assets/plastic-bottles.webp';
+import plasticBags from '../assets/plastic-bags.webp';
+import glassPaperPlastic from '../assets/glass-paper-plastic-recycle.webp';
 
 export const Challenges = () => {
 
@@ -43,7 +43,7 @@ export const Challenges = () => {
             {challenges.map((challenge) => (   
                 <div key={challenge.id} className='challenges'>
                     <div className='challenge-img-container'>
-                        <img src={challenge.image}/>
+                        <img src={challenge.image} alt={`${challenge.description} photo`} width="200px" height="auto"/>
                     </div>
                     <div className='challenge-text'>
                         <h4>{challenge.name}</h4>

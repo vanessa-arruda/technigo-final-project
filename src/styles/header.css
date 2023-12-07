@@ -3,7 +3,7 @@
 header{
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
     gap: 0;
     background-color: #B7CE63;
     margin: 0;
@@ -24,17 +24,23 @@ header{
 }
 
 .header-points{
-    padding-right: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 .header-user p,
 .header-points p{
     margin: 0;
+    font-weight: 700;
+    text-align: center;
 }
 
 .header-points h3{
     font-size: 16px;
     margin: 0;
     padding-bottom: 4px;
+    text-align: center;
 }
 
 .header-points p{
@@ -71,7 +77,6 @@ header{
     border-radius: 50px;
     padding: 18px;
     border: none;
-    margin-left: 8px;
     background-color: #4B5842;
     color: #fff;
     font-weight: 700;
@@ -82,3 +87,41 @@ header{
     
 }
 
+@media screen and (max-width: 496px){
+    .header-logo h1{
+        font-size: 18px;
+    }
+
+    .header-points h3{
+        font-size: 13px;
+    }
+
+    .header-points p{
+        padding: 4px 30px;
+    }
+
+    .header-logo img{
+        width: 40px;
+        height: auto;
+
+    }
+
+    .header-logo h1{
+        font-size: 16px;
+    }
+
+    .header-user p{
+        font-size: 12px;
+    }
+
+    .loginButton{
+        padding: 8px 10px;
+    }
+}
+
+@media screen and (max-width: 629px){
+    .header-points h3{
+        font-size: 12px;
+    }
+
+}

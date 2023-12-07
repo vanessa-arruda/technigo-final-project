@@ -14,7 +14,7 @@
 }
 
 .main-image{
-    background-image: url(/recycling-bins.jpeg);
+    background-image: url(/recycling-bins.webp);
     background-repeat: no-repeat;
     background-size: cover;
     height: 500px;
@@ -29,4 +29,16 @@
     margin-top: 50px;
     font-weight: 800;
     text-align: center;
+}
+
+.home img{
+    width: 200px;
+    height: auto;
+}
+
+.home-quiz-container{
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+    align-items: center;
 }
