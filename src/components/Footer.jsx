@@ -9,9 +9,9 @@ export const Footer = () => {
             <h3>Follow us</h3>
             <IconContext.Provider value={{className: 'sm-icons'}}>
               <div>
-                <a href="https://youtube.com"><FaYoutube/></a>
-                <a href="https://instagram.com"><FaInstagram /></a>
-                <a href="https://linkedin.com"><FaLinkedin /></a>
+                <a href="https://youtube.com" aria-label="Youtube social media"><FaYoutube/></a>
+                <a href="https://instagram.com" aria-label="Instagram social media"><FaInstagram /></a>
+                <a href="https://linkedin.com" aria-label="LinkedIn social media"><FaLinkedin /></a>
               </div>
             </IconContext.Provider>
         </div>
