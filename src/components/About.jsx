@@ -1,6 +1,6 @@
 import '../styles/about.css';
-import imageTwo from '../assets/unplash-mert-guller-img.jpeg'
-import imageThree from '../assets/unplash-jed-together.jpeg'
+import imageTwo from '../assets/unplash-mert-guller-img.webp'
+import imageThree from '../assets/unplash-jed-together.webp'
 
 export const About = () => {
   return (
@@ -9,7 +9,7 @@ export const About = () => {
           <p className='first-row-text'>Welcome to RealCycle App. This project was created as the 
             Final Project of Technigo's bootcamp and follows the agenda 2030.</p>
         <div className='first-row-img'>
-          {/* <img src={imageTwo}/> */}
+          <img src={imageTwo} alt="girl with leaf image"/>
         </div>
       </section>
       <section className='second-row'>
@@ -30,7 +30,7 @@ export const About = () => {
       </section>
       <section className='third-row'>
         <div class="third-row-img">
-          {/* <img src={imageThree} width='300px'/> */}
+          {/* <img src={imageThree} alt="people running happy in nature"/> */}
         </div>
         <div class="third-row-text">
           <p>When you are logged in, you are able to win points by doing daily challenges in our home page;</p>

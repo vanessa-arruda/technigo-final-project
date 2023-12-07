@@ -21,14 +21,15 @@
     height: 100%;
     color: white;
     padding: 0 12px;
+    text-align: center;
 }
 
 .first-row-img{
     grid-column-start: 2;
     grid-row-start: 1;
-    height: 350px;
+    height: 100%;
     margin: 0;
-    background-image: url('../assets/unplash-mert-guller-img.jpeg');
+    background-image: url('../assets/unplash-mert-guller-img.webp');
     background-repeat: none;
     background-size: cover;
 }
@@ -71,32 +72,35 @@
 }
 
 .third-row{
-    display: grid;
-    grid-template-rows: 1;
-    grid-template-columns: 50% 50%;
     align-items: center;
     justify-content: center;
     margin-bottom: 24px;
+    width: 100%;
     
 }
-
+/* 
 .third-row-img{
     grid-column-start: 1;
     grid-row-start: 3;
-    height: 350px;
     margin: 0;
-    background-image: url('../assets/unplash-jed-together.jpeg');
+    background-image: url('../assets/unplash-jed-together.webp');
     background-repeat: none;
     background-size: cover;
-}
+} */
 
 .third-row-text{
-    grid-column-start: 2;
-    grid-row-start: 3;
+    grid-column-start: 1;
+    grid-row-start: 1;
     background-color: #84754b;
-    height: 100%;
     color: white;
     padding: 0 12px;
+    text-align: center;
+    margin: 0;
+}
+
+.third-row-text p{
+    margin: 0;
+    padding: 12px;
 }
 
 @media screen and (max-width: 750px){
@@ -115,12 +119,12 @@
     .second-row-title h1{
         font-size: 28px;
     }
-    .third-row-img{
+    /* .third-row-img{
         height: 500px;
         background-image: url('../assets/unplash-jed-together.jpeg');
         background-repeat: none;
         background-size: cover;
-    }
+    } */
 }
 
 @media screen and (max-width: 457px){
