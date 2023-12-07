@@ -1,69 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-
-
-const questions =
-[
-  {
-    id: 1,
-    questionText: "What is the primary goal of recycling?",
-    options: [
-      "Reducing waste and conserving resources",
-      "Increasing landfill space",
-      "Encouraging pollution",
-      "Exploiting natural resources"
-    ],
-    correctAnswerIndex: 0,
-    explanation: "Recycling aims to reduce waste and conserve resources by reusing materials in the production process."
-  },
-  {
-    id: 2,
-    questionText: "Which of the following materials is commonly recycled to reduce environmental impact?",
-    options: [
-      "Plastic",
-      "Styrofoam",
-      "Single-use batteries",
-      "Mixed with non-recyclable materials"
-    ],
-    correctAnswerIndex: 0,
-    explanation: "Plastic is commonly recycled to reduce environmental impact and promote sustainability."
-  },
-  {
-    id: 3,
-    questionText: "How does composting contribute to sustainability?",
-    options: [
-      "Produces harmful greenhouse gases",
-      "Increases landfill waste",
-      "Converts organic waste into nutrient-rich soil",
-      "Requires a large amount of water"
-    ],
-    correctAnswerIndex: 2,
-    explanation: "Composting contributes to sustainability by converting organic waste into nutrient-rich soil, supporting plant growth and reducing the need for chemical fertilizers."
-  },
-  {
-    id: 4,
-    questionText: "What is an example of a sustainable practice in daily life?",
-    options: [
-      "Using disposable single-use products",
-      "Conserving water and energy",
-      "Throwing all waste into a single bin",
-      "Ignoring environmental regulations"
-    ],
-    correctAnswerIndex: 1,
-    explanation: "Conserving water and energy is an example of a sustainable practice in daily life that helps reduce environmental impact."
-  },
-  {
-    id: 5,
-    questionText: "What is the purpose of the circular economy concept in sustainability?",
-    options: [
-      "Promoting a linear consumption model",
-      "Encouraging planned obsolescence",
-      "Reducing waste and promoting recycling",
-      "Increasing dependence on finite resources"
-    ],
-    correctAnswerIndex: 2,
-    explanation: "The circular economy concept in sustainability aims to reduce waste and promote recycling by emphasizing the continuous use and recycling of materials in a closed loop."
-  }
-];
+import qData from '../questions.json';
 
 const initialState = {
   //Authentication
@@ -73,13 +9,11 @@ const initialState = {
     { userName: "vanessa", password: "2", points: 470 },
   ],
   loginUser: "Guest",
-  //Quiz
-  questions,
   answers: [],
   currentQuestionIndex: 0,
   quizOver: false,
-  score: 0, // Added a score property to the state
-  scoreThreshold: -10 // Set a score threshold to end the quiz
+  score: 0,
+  scoreThreshold: -10 
 };
 
 
@@ -90,7 +24,7 @@ export const userSlice = createSlice({
   reducers: {
     submitAnswer: (state, action) => {
       const { questionId, answerIndex } = action.payload;
-      const question = state.questions.find((q) => q.id === questionId);
+      const question = qData.questions.find((q) => q.id === questionId);
     
       if (!question) {
         throw new Error(
@@ -105,7 +39,7 @@ export const userSlice = createSlice({
       }
     
       const isCorrect = question.correctAnswerIndex === answerIndex;
-      const scoreChange = isCorrect ? 10 : -5; // Adjust points as needed
+      const scoreChange = isCorrect ? 10 : 0; // Adjust points as needed
     
       state.answers.push({
         questionId,
@@ -123,7 +57,7 @@ export const userSlice = createSlice({
       }
     },
     goToNextQuestion: (state) => {
-      if (state.currentQuestionIndex + 1 === state.questions.length) {
+      if (state.currentQuestionIndex + 1 === qData.questions.length) {
         state.quizOver = true;
       } else {
         state.currentQuestionIndex += 1;

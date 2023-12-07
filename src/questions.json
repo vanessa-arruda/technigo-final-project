@@ -1,0 +1,70 @@
+{
+    "questions": [
+      {
+        "id": 1,
+        "questionText": "What is the primary goal of recycling?",
+        "questionImages": "/q1.webp",
+        "options": [
+          "Reducing waste and conserving resources",
+          "Increasing landfill space",
+          "Encouraging pollution",
+          "Exploiting natural resources"
+        ],
+        "correctAnswerIndex": 0,
+        "explanation": "Recycling aims to reduce waste and conserve resources by reusing materials in the production process."
+      },
+      {
+        "id": 2,
+        "questionText": "Which of the following materials is commonly recycled to reduce environmental impact?",
+        "questionImages": "/q2.webp",
+        "options": [
+          "Plastic",
+          "Styrofoam",
+          "Single-use batteries",
+          "Mixed with non-recyclable materials"
+        ],
+        "correctAnswerIndex": 0,
+        "explanation": "Plastic is commonly recycled to reduce environmental impact and promote sustainability."
+      },
+      {
+        "id": 3,
+        "questionText": "How does composting contribute to sustainability?",
+        "questionImages": "/q3.webp",
+        "options": [
+          "Produces harmful greenhouse gases",
+          "Increases landfill waste",
+          "Converts organic waste into nutrient-rich soil",
+          "Requires a large amount of water"
+        ],
+        "correctAnswerIndex": 2,
+        "explanation": "Composting contributes to sustainability by converting organic waste into nutrient-rich soil, supporting plant growth and reducing the need for chemical fertilizers."
+      },
+      {
+        "id": 4,
+        "questionText": "What is an example of a sustainable practice in daily life?",
+        "questionImages": "/q4.webp",
+        "options": [
+          "Using disposable single-use products",
+          "Conserving water and energy",
+          "Throwing all waste into a single bin",
+          "Ignoring environmental regulations"
+        ],
+        "correctAnswerIndex": 1,
+        "explanation": "Conserving water and energy is an example of a sustainable practice in daily life that helps reduce environmental impact."
+      },
+      {
+        "id": 5,
+        "questionText": "What is the purpose of the circular economy concept in sustainability?",
+        "questionImages": "/q5.webp",
+        "options": [
+          "Promoting a linear consumption model",
+          "Encouraging planned obsolescence",
+          "Reducing waste and promoting recycling",
+          "Increasing dependence on finite resources"
+        ],
+        "correctAnswerIndex": 2,
+        "explanation": "The circular economy concept in sustainability aims to reduce waste and promote recycling by emphasizing the continuous use and recycling of materials in a closed loop."
+      }
+    ]
+  }
+  
