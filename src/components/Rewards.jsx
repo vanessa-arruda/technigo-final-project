@@ -47,8 +47,10 @@ export const Rewards = () => {
   }, [partners]);
   
   const handlePointsExchange = (points) => {
-    if(userPoints > points){
+    //console.log ( points);
+    if(userPoints >= points){
       dispatch(decreasePoints ({ userName: loginUser, pointsToRemove: points }));
+      alert("Your reward will be send to your email");
     }
   }
 

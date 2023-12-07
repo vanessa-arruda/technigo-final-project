@@ -86,6 +86,7 @@ export const userSlice = createSlice({
 
     decreasePoints: (state, action) => {
       const { userName, pointsToRemove } = action.payload;
+      console.log(pointsToRemove);
       const updatedUsers = state.users.map((user) => {
         if (user.userName === userName) {
           return { ...user, points: user.points - pointsToRemove };

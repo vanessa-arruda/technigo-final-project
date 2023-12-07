@@ -1,8 +1,16 @@
 import '../styles/challenges.css';
+<<<<<<< Updated upstream
 import canImg from '../assets/metal-cans.webp';
 import plasticBottles from '../assets/plastic-bottles.webp';
 import plasticBags from '../assets/plastic-bags.webp';
 import glassPaperPlastic from '../assets/glass-paper-plastic-recycle.webp';
+=======
+import canImg from '../assets/metal-cans.png';
+import plasticBottles from '../assets/plastic-bottles.png';
+import plasticBags from '../assets/plastic-bags.png';
+import glassPaperPlastic from '../assets/glass-paper-plastic-recycle.png';
+import { NavLink } from 'react-router-dom';
+>>>>>>> Stashed changes
 
 export const Challenges = () => {
 
@@ -50,7 +58,7 @@ export const Challenges = () => {
                         <p>{challenge.description}</p>
                         <p>Rewards {challenge.points} points</p>
                     </div>
-                    <button>Do it</button>
+                    <NavLink to='/addItem' >Do it</NavLink>
                 </div>
             ))}
         </div>    
