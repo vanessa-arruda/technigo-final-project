@@ -46,14 +46,12 @@ export const CurrentQuestion = () => {
     dispatch(goToNextQuestion());
   };
   const handleFinish = () => {
-    if (!finishClicked) {
-      setFinishClicked(true);
-
       alert(`Your score is: ${recycle.score}`);
       dispatch(
         increasePoints({ userName: loginUser, pointsToAdd: recycle.score })
       );
-    }
+      dispatch(restart());
+    
   };
 
   // console.log(recycle.currentQuestionIndex ,recycle.questions.length);

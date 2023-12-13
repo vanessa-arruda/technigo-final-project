@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { increasePoints } from "../reducers/recycle";
 import "../styles/addItem.css";
 import { LuBadgeCheck } from "react-icons/lu";
-
 import plasticBottles from "../../public/plastic-bottles.webp";
 import batteries from "../../public/batteries.webp";
 import glassBottles from "../../public/glassbottles.webp";
@@ -85,10 +84,10 @@ export const ItemSelector = () => {
           <label htmlFor="itemSelect">Choose an item:</label>
           <select
             id="itemSelect"
-            value={selectedItem.name}
+            //value={selectedItem.name}
             onChange={handleSelectChange}
           >
-            <option value="">Select an item</option>
+            <option value="" selected={!selectedItem.name}>Select an item</option>
             {Object.values(itemsObjList).map((item) => (
               <option key={item.id} value={item.name}>{item.name}</option>
             ))}
