@@ -48,7 +48,7 @@ export const Challenges = () => {
                         <img src={challenge.image} alt={`${challenge.description} photo`} width="200px" height="auto"/>
                     </div>
                     <div className='challenge-text'>
-                        <h4>{challenge.name}</h4>
+                        <h3>{challenge.name}</h3>
                         <p>{challenge.description}</p>
                         <p>Rewards {challenge.points} points</p>
                     </div>

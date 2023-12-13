@@ -14,7 +14,6 @@ export const Header = ({onLoginClick}) => {
 
   return (
     <header>
-
         <div className='header-user'>
           <button className='loginButton'  onClick={() => onLoginClick()} > 
             login
@@ -26,8 +25,8 @@ export const Header = ({onLoginClick}) => {
             <h1>RealCycle App</h1>
         </div>
         <div className='header-points'>
-            <h3>Current Points</h3>
-            <p>{point}</p>
+            <p className='current-points'>Current Points</p>
+            <p className='points'>{point}</p>
         </div>
     </header>
   )

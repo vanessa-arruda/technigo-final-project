@@ -10,6 +10,14 @@
     background-color: #C7D59F;
     border-radius: 12px;
     gap: 12px;
+    
+  }
+
+  .selectedItem-img-items-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 24px;
   }
 
   .item-selector-container label{
@@ -32,16 +40,28 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 12px 0;
+    margin: 0;
+    margin-bottom: 24px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    width: 300px;
   }
 
   .selected-items-container h2{
     font-size: 20px;
+    color: black;
+    margin-bottom: 0;
+  }
+
+  .selected-items-container p{
+    font-size: 36px;
+    padding: 0;
+    margin: 0;
   }
   
   .selected-item {
     margin-top: 24px;
-    color: green;
+    color: #015f01;
     font-weight: bold;
     width: 100%;
     text-align: center;
@@ -50,7 +70,7 @@
   }
 
   .add-items-btn{
-    width: 80%;
+    width: 80px;
     margin-top: 8px;
     border: none;
     background-color: #4B5842;
@@ -69,11 +89,10 @@
     border-radius: 12px;
     margin: 8px;
   }
-
-  .selectedItem-img-items-container{
-    display: flex;
-    justify-content: space-around;
-    margin: 24px;
+  .submit-btn:hover,
+  .add-items-btn:hover{
+    color:#ffffff;
+    background-color: #6c7556;
   }
 
   .selectedItem-container{
@@ -81,15 +100,17 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    padding: 16px;
   }
 
   .material-img{
-    width: 40%;
-    height: auto;
+    width: 200px;
+    height: 200px;
   }
 
   .material-img img{
-    width: 100%;
+    width: 190px;
+    height: 190px;
     border-radius: 12px;
   }
   
@@ -101,7 +122,39 @@
     list-style-type:none;
     text-transform: capitalize;
     text-align: left;
-    margin: 0;
+    margin: 12px;
     font-weight: 700;
-    color: green;
+    color: rgb(9, 118, 9);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
   }
+
+  .li-item-name{
+    background-color: #dfefb2;
+    border-radius: 8px;
+    padding: 4px 16px;
+    margin-right: 8px;
+    min-width: 100px;
+  }
+  .li-item-points{
+    background-color: #dfefb2;
+    border-radius: 8px;
+    padding: 4px 16px;
+    align-content: right;
+    color: blue;
+    min-width: 80px;
+  }
+
+  @media screen and (max-width: 496px){
+
+    .item-selector-container label{
+      font-size: 16px;
+      font-weight: 700;
+      margin: 12px 0;
+      text-align: center;
+  
+    }
+  }
+
