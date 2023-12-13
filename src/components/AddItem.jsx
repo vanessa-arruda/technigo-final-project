@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { increasePoints } from "../reducers/recycle";
 import "../styles/addItem.css";
+import { LuBadgeCheck } from "react-icons/lu";
 
 import plasticBottles from "../../public/plastic-bottles.webp";
 import batteries from "../../public/batteries.webp";
@@ -92,20 +93,21 @@ export const ItemSelector = () => {
               <option key={item.id} value={item.name}>{item.name}</option>
             ))}
           </select>
-          {selectedItem && Object.keys(selectedItem).length > 0 && (
-            <p className="selected-item">You selected: {selectedItem.name}</p>
-          )}
+          {selectedItem && Object.keys(selectedItem).length > 0 
+          // && (
+          //   <p className="selected-item">You selected: {selectedItem.name}</p>)
+          }
           <button className="add-items-btn" onClick={handleAddItem} disabled={!selectedItem}>
             Add
           </button>
         </div>
       </div>
-
       <div className="selected-items-container">
-        <h2>Selected Items:</h2>
+        <h2>Selected Items List</h2>
+        <p>🚮</p>
         <ul>
           {selectedItems.map((item, index) => (
-            <li key={index}>{item.name} ({item.point} points)</li>
+            <li key={index}><div className="li-item-name"><LuBadgeCheck /> {item.name}</div><div className="li-item-points">+ {item.point} points</div></li>
           ))}
         </ul>
         <button className="submit-btn" onClick={handleSubmit} disabled={!selectedItems.length}>
