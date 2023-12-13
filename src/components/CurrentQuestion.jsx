@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { FaRegCheckCircle } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
 import recycle, {
@@ -13,6 +14,7 @@ import "../styles/CurrentQuestion.css";
 import qData from "../questions.json";
 
 export const CurrentQuestion = () => {
+  const [finishClicked, setFinishClicked] = useState(false);
   const question = useSelector(
     (state) => qData.questions[state.recycle.currentQuestionIndex]
   );
@@ -36,8 +38,6 @@ export const CurrentQuestion = () => {
   const incorrectAnswerIndex =
     answer && !answer.isCorrect ? answer.answerIndex : undefined;
 
-
-
   const handleRestart = () => {
     dispatch(restart());
   };
@@ -45,13 +45,17 @@ export const CurrentQuestion = () => {
   const handleNext = () => {
     dispatch(goToNextQuestion());
   };
-
   const handleFinish = () => {
-    alert(`your score is: ${recycle.score} `);
-    dispatch(
-      increasePoints({ userName: loginUser, pointsToAdd: recycle.score })
-    );
+    if (!finishClicked) {
+      setFinishClicked(true);
+
+      alert(`Your score is: ${recycle.score}`);
+      dispatch(
+        increasePoints({ userName: loginUser, pointsToAdd: recycle.score })
+      );
+    }
   };
+
   // console.log(recycle.currentQuestionIndex ,recycle.questions.length);
   return (
     <main className="quiz-container">
