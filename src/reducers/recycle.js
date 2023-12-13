@@ -64,8 +64,14 @@ export const userSlice = createSlice({
       }
     },
   
-    restart: () => {
-      return initialState;
+    restart: (state) => {
+      return {
+        ...state,
+        answers: initialState.answers,
+        score: initialState.score,
+        currentQuestionIndex: initialState.currentQuestionIndex,
+        quizOver: initialState.quizOver,
+      };
     },
 
 
