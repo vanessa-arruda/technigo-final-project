@@ -16,7 +16,6 @@ const initialState = {
   scoreThreshold: -10 
 };
 
-
 //quiz
 export const userSlice = createSlice({
   name: "recycle",
@@ -102,7 +101,6 @@ export const userSlice = createSlice({
     
       return { ...state, users: updatedUsers };
     },
-    
 
     loginUser: (state, action) => {
       const { enteredUsername, enteredPassword } = action.payload;
@@ -123,6 +121,6 @@ export const userSlice = createSlice({
   },
 });
 
-export const { increasePoints, decreasePoints, loginUser,submitAnswer, restart,countQuestionsLeft,goToNextQuestion } = userSlice.actions;
+export const { increasePoints, decreasePoints, loginUser,submitAnswer, restart,countQuestionsLeft,goToNextQuestion,completeTask, resetTasks} = userSlice.actions;
 
 export default userSlice.reducer;

@@ -9,38 +9,11 @@ import glassBottles from "../../public/glassbottles.webp";
 import metalCans from "../../public/metal-cans.webp";
 import paper from "../../public/paper.webp";
 import greenBin from "../../public/green-bin.webp";
+import { useLocation } from 'react-router-dom';
 
 export const ItemSelector = () => {
-  const [selectedItem, setSelectedItem] = useState({});
-  const [selectedItems, setSelectedItems] = useState([]);
 
-  const dispatch = useDispatch();
-  const loginUser = useSelector((state) => state.recycle.loginUser);
-
-  const handleSelectChange = (event) => {
-    if(event.target.value) {
-      setSelectedItem(itemsObjList[event.target.value]);
-    } else{
-      setSelectedItem({});
-    }
-
-  };
-
-  const handleSubmit = () => {
-    const totalPoints = selectedItems.reduce(
-      (accumulator, currentItem) => accumulator + currentItem.point, 0
-    );
-    dispatch(increasePoints({ userName: loginUser, pointsToAdd: totalPoints}));
-    setSelectedItems([]);
-    
-  };
-  const handleAddItem = () => {
-    if (Object.keys(selectedItem).length > 0) {
-      setSelectedItems((prevItems) => [...prevItems, selectedItem]);
-      setSelectedItem({});
-    }
-  };
-
+  
   const itemsObjList = {
     plastic: {
       id: 1,
@@ -73,6 +46,44 @@ export const ItemSelector = () => {
       point: 6,
     },
   }
+
+  const location = useLocation();
+  const itemId = location?.state?.itemId;
+  const numberOfItems = location?.state?.numberOfItems;
+  
+  const [selectedItem, setSelectedItem] = useState({});
+  const [selectedItems, setSelectedItems] = useState(itemId ? Array.from({ length: numberOfItems }, () => (
+    itemsObjList[itemId]
+  )): []);
+
+
+  const dispatch = useDispatch();
+  const loginUser = useSelector((state) => state.recycle.loginUser);
+
+  const handleSelectChange = (event) => {
+    if(event.target.value) {
+      setSelectedItem(itemsObjList[event.target.value]);
+    } else{
+      setSelectedItem({});
+    }
+
+  };
+
+  const handleSubmit = () => {
+    const totalPoints = selectedItems.reduce(
+      (accumulator, currentItem) => accumulator + currentItem.point, 0
+    );
+    dispatch(increasePoints({ userName: loginUser, pointsToAdd: totalPoints}));
+    setSelectedItems([]);
+    
+  };
+  const handleAddItem = () => {
+    if (Object.keys(selectedItem).length > 0) {
+      setSelectedItems((prevItems) => [...prevItems, selectedItem]);
+      console.log(selectedItems);
+      setSelectedItem({});
+    }
+  };
 
   return (
     <div className="item-selector-container">
