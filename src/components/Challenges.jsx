@@ -3,7 +3,7 @@ import canImg from '../assets/metal-cans.webp';
 import plasticBottles from '../assets/plastic-bottles.webp';
 import plasticBags from '../assets/plastic-bags.webp';
 import glassPaperPlastic from '../assets/glass-paper-plastic-recycle.webp';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 export const Challenges = () => {
@@ -15,6 +15,8 @@ export const Challenges = () => {
             description: 'collect 3 plastic bottles',
             points: 15,
             image: plasticBottles,
+            itemId: 'plastic',
+            numberOfItems: 3,
         },
         {
             id: 2,
@@ -22,20 +24,26 @@ export const Challenges = () => {
             description: 'collect 5 metal cans',
             points: 15,
             image: canImg,
+            itemId: 'metal',
+            numberOfItems: 5,
         },
         {
             id: 3,
-            name: 'Plastic Exterminator',
-            description: 'collect 10 plastic bags',
+            name: 'Paper Exterminator',
+            description: 'collect 10 paper',
             points: 35,
             image: plasticBags,
+            itemId: 'paper',
+            numberOfItems: 10,
         },
         {
             id: 4,
-            name: 'Trash Buster',
-            description: 'collect 10 items of different materials',
+            name: 'Glass',
+            description: 'collect 10 Glass',
             points: 50,
             image: glassPaperPlastic,
+            itemId: 'glass',
+            numberOfItems: 10,
         },
     ]
 
@@ -52,7 +60,7 @@ export const Challenges = () => {
                         <p>{challenge.description}</p>
                         <p>Rewards {challenge.points} points</p>
                     </div>
-                    <NavLink to='/addItem' >Do it</NavLink>
+                    <Link to="/AddItem" state={{numberOfItems: challenge.numberOfItems, itemId: challenge.itemId}} >Do it</Link >
                 </div>
             ))}
         </div>    
