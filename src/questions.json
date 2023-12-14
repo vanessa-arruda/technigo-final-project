@@ -3,7 +3,7 @@
       {
         "id": 1,
         "questionText": "What is the primary goal of recycling?",
-        "questionImages": "/q1.webp",
+        "questionImages": "/recycling-quiz-img-1.png",
         "options": [
           "Reducing waste and conserving resources",
           "Increasing landfill space",
@@ -16,7 +16,7 @@
       {
         "id": 2,
         "questionText": "Which of the following materials is commonly recycled to reduce environmental impact?",
-        "questionImages": "/q2.webp",
+        "questionImages": "/recycling-quiz-img-2.png",
         "options": [
           "Plastic",
           "Styrofoam",
@@ -29,7 +29,7 @@
       {
         "id": 3,
         "questionText": "How does composting contribute to sustainability?",
-        "questionImages": "/q3.webp",
+        "questionImages": "/recycling-quiz-img-3.png",
         "options": [
           "Produces harmful greenhouse gases",
           "Increases landfill waste",
@@ -42,7 +42,7 @@
       {
         "id": 4,
         "questionText": "What is an example of a sustainable practice in daily life?",
-        "questionImages": "/q4.webp",
+        "questionImages": "/recycling-quiz-img-4.png",
         "options": [
           "Using disposable single-use products",
           "Conserving water and energy",
@@ -55,7 +55,7 @@
       {
         "id": 5,
         "questionText": "What is the purpose of the circular economy concept in sustainability?",
-        "questionImages": "/q5.webp",
+        "questionImages": "/recycling-quiz-img-5.png",
         "options": [
           "Promoting a linear consumption model",
           "Encouraging planned obsolescence",
