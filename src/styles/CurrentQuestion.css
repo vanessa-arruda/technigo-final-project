@@ -85,7 +85,7 @@
     justify-content:center;
     gap: 12px;
     align-items: center;
-    width: 40%;
+    width: auto ;
     height: auto;
     padding-top: 36px;
     margin: 0;
@@ -99,12 +99,12 @@
     min-height: 48px;
     color: #fff;
     font-weight: 500;
-    width: 300px;
+    width: 100%;
     text-align: left;
     font-size: 16px;
     word-break: break-all;
     margin: 0;
-    padding: 0;
+    padding: 9px;
   }
   
   .answers:hover{
