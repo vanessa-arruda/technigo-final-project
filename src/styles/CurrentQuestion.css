@@ -11,7 +11,7 @@
   
   .btn{
     border: none;
-    background-color: #8FB339;
+    background-color: #4B5842;
     color: #FFF;
     font-weight: 600;
     padding: 8px 12px;
@@ -21,7 +21,7 @@
   
   .btn:hover{
     cursor: pointer;
-    background-color: #B7CE63;
+    background-color: #708363;
   }
   
   .hidden {
