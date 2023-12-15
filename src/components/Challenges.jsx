@@ -60,7 +60,7 @@ export const Challenges = () => {
                         <p>{challenge.description}</p>
                         <p>Rewards {challenge.points} points</p>
                     </div>
-                    <Link to="/AddItem" state={{numberOfItems: challenge.numberOfItems, itemId: challenge.itemId}} >Do it</Link >
+                    <Link to="/AddItem" state={{numberOfItems: challenge.numberOfItems, itemId: challenge.itemId, challengePoint: challenge.points}} >Do it</Link >
                 </div>
             ))}
         </div>    

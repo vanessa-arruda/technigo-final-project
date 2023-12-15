@@ -48,12 +48,13 @@ export const ItemSelector = () => {
   }
 
   const location = useLocation();
-  const itemId = location?.state?.itemId;
-  const numberOfItems = location?.state?.numberOfItems;
+  const challengeItemId = location?.state?.itemId;
+  const challengeNumberOfItems = location?.state?.numberOfItems;
+  const challengePoint = location?.state?.challengePoint;
   
   const [selectedItem, setSelectedItem] = useState({});
-  const [selectedItems, setSelectedItems] = useState(itemId ? Array.from({ length: numberOfItems }, () => (
-    itemsObjList[itemId]
+  const [selectedItems, setSelectedItems] = useState(challengeItemId ? Array.from({ length: challengeNumberOfItems }, () => (
+    itemsObjList[challengeItemId]
   )): []);
 
 
@@ -70,7 +71,17 @@ export const ItemSelector = () => {
   };
 
   const handleSubmit = () => {
-    const totalPoints = selectedItems.reduce(
+    let totalPoints = 0;
+
+    if (challengeItemId) {
+      const selectedChallengeItems = selectedItems.filter(item => item.name === challengeItemId);
+      if (selectedChallengeItems.length === challengeNumberOfItems) {
+        totalPoints = challengePoint;
+        alert(`You have completed this daily challenge and earned ${challengePoint} extra points`);
+      }
+    }
+
+    totalPoints += selectedItems.reduce(
       (accumulator, currentItem) => accumulator + currentItem.point, 0
     );
     dispatch(increasePoints({ userName: loginUser, pointsToAdd: totalPoints}));
