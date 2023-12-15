@@ -11,8 +11,8 @@ const routes = (
         <Route path='/' element={<Home />} />
         <Route path='/rewards' element={<Rewards />} />
         <Route path='/about' element={<About />} />
-        <Route path='/AddItem' element={<ItemSelector />} />
-        <Route path='/Quiz' element={<CurrentQuestion />} />
+        <Route path='/addItem' element={<ItemSelector />} />
+        <Route path='/quiz' element={<CurrentQuestion />} />
         <Route path='*' element={<NotFoundPage/>}/>
     </Routes>
 )
