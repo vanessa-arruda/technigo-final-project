@@ -21,6 +21,10 @@ footer p{
     padding: 4px;
 }
 
-.social-media h3{
+.social-media-btns{
+    text-align: center;
+}
+
+.social-media h1{
     text-align: center;
 }

@@ -6,9 +6,9 @@ export const Footer = () => {
   return (
     <footer className='footer-container'>
         <div className='social-media'>
-            <h3>Follow us</h3>
+            <h1>Follow us</h1>
             <IconContext.Provider value={{className: 'sm-icons'}}>
-              <div>
+              <div className='social-media-btns'>
                 <a href="https://youtube.com" aria-label="Youtube social media"><FaYoutube/></a>
                 <a href="https://instagram.com" aria-label="Instagram social media"><FaInstagram /></a>
                 <a href="https://linkedin.com" aria-label="LinkedIn social media"><FaLinkedin /></a>
